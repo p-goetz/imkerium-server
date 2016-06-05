@@ -13,8 +13,8 @@ RESTful web services for the imkerium.de website and mobile application to provi
 ## Folder structure
 
 - app/
-	app.js: configure and set up application
-	models/ 
+	- app.js: configure and set up application
+	- models/ 
 		- beekeeper.js: model for the beekeeper information used by the website
 		- site.js: model for the site and hive information used by the mobile app
 - package.json: node module setup and dependencies
