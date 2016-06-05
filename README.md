@@ -21,4 +21,9 @@ RESTful web services for the imkerium.de website and mobile application to provi
 
 ## Run 
 
+### Mongo DB
+	mongod --dbpath <db_folder>
+
+### NodeJS server
+
 	node app/app.js
