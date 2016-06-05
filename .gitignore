@@ -1,0 +1,4 @@
+node_modules
+*.bbprojectd
+
+.DS_Store
