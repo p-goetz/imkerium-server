@@ -1,4 +1,4 @@
-# imkerium server application
+# Imkerium Server Application
 
 RESTful web services for the imkerium.de website and mobile application to provide beekeeper's information and manage their hives. 
 
