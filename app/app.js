@@ -4,7 +4,10 @@ var path = require('path');
 var logger = require('morgan');
 // var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+var authenticate = require('./authenticate');
 
+var userRouter = require('./routes/userRouter');
 var beekeeperRouter = require('./routes/beekeeperRouter');
 var messageRouter = require('./routes/messageRouter');
 
@@ -31,8 +34,11 @@ db.once('open', function () {
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(cookieParser());
+//app.use(cookieParser());
 
+app.use(passport.initialize());
+
+app.use('/users', userRouter);
 app.use('/beekeeper', beekeeperRouter);
 app.use('/message', messageRouter);
 

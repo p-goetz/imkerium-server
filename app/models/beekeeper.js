@@ -17,8 +17,6 @@ var addressSchema = new Schema({
     type: String,
     required: true
   }
-}, {
-  timestamps: true
 });
 
 var informationSchema = new Schema({
@@ -33,8 +31,6 @@ var informationSchema = new Schema({
   image:  {
     type: String
   }
-}, {
-  timestamps: true
 });
 
 var productSchema = new Schema({
@@ -57,8 +53,6 @@ var productSchema = new Schema({
   image:  {
     type: String
   }
-}, {
-  timestamps: true
 });
 
 var beekeeperSchema = new Schema({
@@ -88,8 +82,6 @@ var beekeeperSchema = new Schema({
   information: [ informationSchema ],
   products: [ productSchema ],
   sites: [{ type: Schema.Types.ObjectId, ref: 'Site' }]
-}, {
-  timestamps: true
 });
 
 module.exports = mongoose.model('Beekeeper', beekeeperSchema);

@@ -26,8 +26,6 @@ var logbookSchema = new Schema({
     type: String,
     required: true
   }
-}, {
-  timestamps: true
 });
 
 var hiveSchema = new Schema({
@@ -37,8 +35,6 @@ var hiveSchema = new Schema({
     unique: true
   },
   logbook: [ logbookSchema ]
-}, {
-  timestamps: true
 });
 
 var siteSchema = new Schema({
@@ -48,8 +44,6 @@ var siteSchema = new Schema({
     unique: true
   },
   hives: [ hiveSchema ]
-}, {
-  timestamps: true
 });
 
 module.exports = mongoose.model('Site', siteSchema);
